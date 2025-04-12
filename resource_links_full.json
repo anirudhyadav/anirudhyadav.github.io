@@ -553,7 +553,7 @@
   },
   {
     "Algorithm": "LIME",
-    "show": "Y",
+    "show": "N",
     "Medium": "",
     "GitHub": ""
   },

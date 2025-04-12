@@ -3,12 +3,16 @@ import SearchBar from './components/SearchBar';
 import ModelCard from './components/ModelCard';
 import FilterSidebar from './components/FilterSidebar';
 import ModelModal from './components/ModelModal';
+import './App.css';
 
 function App() {
   const [models, setModels] = useState([]);
   const [filtered, setFiltered] = useState([]);
   const [selectedModel, setSelectedModel] = useState(null);
-
+  const [learnedModels, setLearnedModels] = useState(() => {
+    return JSON.parse(localStorage.getItem('learnedModels')) || [];
+  });
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     fetch(process.env.PUBLIC_URL + '/Complete_ML_AI.json')
@@ -19,31 +23,59 @@ function App() {
       });
   }, []);
 
+  useEffect(() => {
+    localStorage.setItem('learnedModels', JSON.stringify(learnedModels));
+  }, [learnedModels]);
+
   const handleSearch = (query) => {
     if (!query) return setFiltered(models);
     const q = query.toLowerCase();
     setFiltered(models.filter((m) =>
-      Object.values(m).some((val) =>
-        val.toLowerCase().includes(q)
-      )
+      Object.values(m).some((val) => val.toLowerCase().includes(q))
     ));
   };
 
+  const toggleLearned = (algorithm) => {
+    setLearnedModels(prev => prev.includes(algorithm)
+      ? prev.filter(item => item !== algorithm)
+      : [...prev, algorithm]);
+  };
+
   return (
-    <div style={{ display: 'flex' }}>
-      <FilterSidebar data={models} setFiltered={setFiltered} />
-      <div style={{ flex: 1, padding: '1rem' }}>
+    <div className={darkMode ? 'app dark' : 'app'}>
+      <div className="topbar">
         <h1>🧠 AI/ML Model Explorer</h1>
-        <SearchBar onSearch={handleSearch} />
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
-          {filtered.map((model, idx) => (
-            <ModelCard key={idx} model={model} onClick={setSelectedModel} />
-          ))}
-        </div>
-  
-        {/* ✅ Modal for full model info */}
-        <ModelModal model={selectedModel} onClose={() => setSelectedModel(null)} />
+        <button onClick={() => setDarkMode(!darkMode)} className="toggle-mode">
+          {darkMode ? '☀️ Light Mode' : '🌙 Dark Mode'}
+        </button>
       </div>
+
+      <div className="hero">
+        <h2>Search, Filter, and Learn AI Models – for Students & Practitioners 🚀</h2>
+        <SearchBar onSearch={handleSearch} />
+      </div>
+
+      <div className="explorer-layout">
+        <div className="sidebar">
+          <FilterSidebar data={models} setFiltered={setFiltered} />
+        </div>
+
+        <div className="content">
+          <div className="model-grid">
+            {filtered.map((model, idx) => (
+              <ModelCard
+                key={idx}
+                model={model}
+                onClick={setSelectedModel}
+                isLearned={learnedModels.includes(model.Algorithm)}
+                toggleLearned={toggleLearned}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <ModelModal model={selectedModel} onClose={() => setSelectedModel(null)} />
     </div>
   );
 }

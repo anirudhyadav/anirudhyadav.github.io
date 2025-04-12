@@ -85,7 +85,7 @@ function App() {
     alt="Signature" 
     style={{ height: "50px", marginRight: "1rem" }}
   />
-  <h1>AI/ML Model Explorer</h1>
+  <h1>AI/ML Explorer</h1>
 </div>
       </div>
 

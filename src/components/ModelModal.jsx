@@ -16,19 +16,15 @@ function ModelModal({ model, onClose, resources }) {
         <p><strong>Libraries:</strong> {model.Libraries}</p>
         <p><strong>Real-World Example:</strong> {model['Real-World Example']}</p>
 
-        {/* ✅ Links shown only if resource is ready */}
         {matched?.show === 'Y' && (
-          <div style={{ marginTop: '1rem' }}>
-            <p>📘 <a href={matched.Medium} target='_blank' rel='noreferrer'>Read on Medium</a></p>
-            <p>💻 <a href={matched.GitHub} target='_blank' rel='noreferrer'>Open GitHub Notebook</a></p>
-          </div>
+          <>
+            <p>📘 <a href={matched.Medium} target="_blank" rel="noreferrer">Read on Medium</a></p>
+            <p>💻 <a href={matched.GitHub} target="_blank" rel="noreferrer">View GitHub Notebook</a></p>
+          </>
         )}
 
-        {/* Optional: Coming Soon Label */}
         {matched?.show === 'N' && (
-          <div style={{ marginTop: '1rem', color: 'orange' }}>
-            🚧 Learning resources for this model coming soon!
-          </div>
+          <p style={{ color: 'orange' }}>🚧 Learning content coming soon!</p>
         )}
       </div>
     </div>
@@ -37,15 +33,17 @@ function ModelModal({ model, onClose, resources }) {
 
 const overlayStyle = {
   position: 'fixed', top: 0, left: 0, right: 0, bottom: 0,
-  backgroundColor: 'rgba(0,0,0,0.5)', display: 'flex', justifyContent: 'center', alignItems: 'center',
+  backgroundColor: 'rgba(0,0,0,0.5)', display: 'flex', justifyContent: 'center', alignItems: 'center'
 };
 
 const modalStyle = {
-  backgroundColor: '#fff', padding: '2rem', borderRadius: '8px', width: '500px', maxHeight: '80vh', overflowY: 'auto'
+  background: '#fff', padding: '2rem', borderRadius: '8px',
+  maxWidth: '600px', maxHeight: '80vh', overflowY: 'auto'
 };
 
 const closeBtnStyle = {
-  float: 'right', cursor: 'pointer', background: 'red', color: '#fff', padding: '0.3rem 0.7rem', border: 'none', borderRadius: '5px'
+  float: 'right', background: 'red', color: '#fff',
+  border: 'none', padding: '0.4rem 1rem', borderRadius: '5px', cursor: 'pointer'
 };
 
 export default ModelModal;

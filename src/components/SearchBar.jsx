@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 function SearchBar({ onSearch }) {
   const [query, setQuery] = useState('');
+
   return (
     <input
       type="text"
@@ -12,11 +13,8 @@ function SearchBar({ onSearch }) {
         onSearch(e.target.value);
       }}
       style={{
-        width: '100%',
-        padding: '0.8rem',
-        fontSize: '1rem',
-        borderRadius: '8px',
-        border: '1px solid #ccc',
+        width: '100%', padding: '0.8rem', marginTop: '1rem',
+        fontSize: '1rem', borderRadius: '8px', border: '1px solid #ccc'
       }}
     />
   );

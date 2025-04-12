@@ -33,7 +33,24 @@ function App() {
   }, []);
 
   useEffect(() => {
-    localStorage.setItem('learnedModels', JSON.stringify(learnedModels));
+    const fetchData = async () => {
+      const modelRes = await fetch(process.env.PUBLIC_URL + '/Complete_ML_AI.json');
+      const resourceRes = await fetch(process.env.PUBLIC_URL + '/resource_links.json');
+  
+      const modelData = await modelRes.json();
+      const resourceData = await resourceRes.json();
+  
+      setModels(modelData);
+      setResources(resourceData);
+  
+      // ✅ Filter models where Algorithm has show === 'Y'
+      const allowed = resourceData.filter(r => r.show === 'Y').map(r => r.Algorithm);
+      const filteredModels = modelData.filter(m => allowed.includes(m.Algorithm));
+  
+      setFiltered(filteredModels);
+    };
+  
+    fetchData();
   }, [learnedModels]);
 
   const handleSearch = (query) => {

@@ -79,10 +79,14 @@ function App() {
   return (
     <div className={darkMode ? 'app dark' : 'app'}>
       <div className="topbar">
-        <h1>🧠 AI/ML Model Explorer</h1>
-        <button onClick={() => setDarkMode(!darkMode)} className="toggle-mode">
-          {darkMode ? '☀️ Light Mode' : '🌙 Dark Mode'}
-        </button>
+      <div style={{ display: "flex", alignItems: "center" }}>
+  <img 
+    src={process.env.PUBLIC_URL + "/Signature.png"} 
+    alt="Signature" 
+    style={{ height: "50px", marginRight: "1rem" }}
+  />
+  <h1>AI/ML Model Explorer</h1>
+</div>
       </div>
 
       <div className="hero">

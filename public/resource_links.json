@@ -2,8 +2,8 @@
   {
     "Algorithm": "Logistic Regression",
     "show": "Y",
-    "Medium": "https://medium.com/@yourname/logistic-regression-explained",
-    "GitHub": "https://github.com/yourname/yourrepo/blob/main/logistic_regression.ipynb"
+    "Medium": "https://medium.com/@anirudhyadav_90257/logistic-regression-701d16989e60",
+    "GitHub": "https://github.com/anirudhyadav/Logistic-Regression"
   },
   {
     "Algorithm": "K-Nearest Neighbors (KNN)",
@@ -25,13 +25,13 @@
   },
   {
     "Algorithm": "Random Forest Classifier",
-    "show": "Y",
+    "show": "N",
     "Medium": "https://medium.com/@yourname/random-forest-guide",
     "GitHub": "https://github.com/yourname/yourrepo/blob/main/random_forest.ipynb"
   },
   {
     "Algorithm": "Gradient Boosting Classifier",
-    "show": "Y",
+    "show": "N",
     "Medium": "https://medium.com/@yourname/gradient-boosting-intro",
     "GitHub": "https://github.com/yourname/yourrepo/blob/main/gradient_boosting_classifier.ipynb"
   },
@@ -67,7 +67,7 @@
   },
   {
     "Algorithm": "Linear Regression",
-    "show": "Y",
+    "show": "N",
     "Medium": "https://medium.com/@yourname/linear-regression-basics",
     "GitHub": "https://github.com/yourname/yourrepo/blob/main/linear_regression.ipynb"
   },
@@ -139,7 +139,7 @@
   },
   {
     "Algorithm": "K-Means",
-    "show": "Y",
+    "show": "N",
     "Medium": "https://medium.com/@yourname/kmeans-customer-segmentation",
     "GitHub": "https://github.com/yourname/yourrepo/blob/main/kmeans_clustering.ipynb"
   },
@@ -181,7 +181,7 @@
   },
   {
     "Algorithm": "PCA",
-    "show": "Y",
+    "show": "N",
     "Medium": "https://medium.com/@yourname/pca-demystified",
     "GitHub": "https://github.com/yourname/yourrepo/blob/main/pca_visualization.ipynb"
   },
@@ -229,7 +229,7 @@
   },
   {
     "Algorithm": "Isolation Forest",
-    "show": "Y",
+    "show": "N",
     "Medium": "https://medium.com/@yourname/isolation-forest-outlier-detection",
     "GitHub": "https://github.com/yourname/yourrepo/blob/main/isolation_forest.ipynb"
   },
@@ -295,7 +295,7 @@
   },
   {
     "Algorithm": "Transformer",
-    "show": "Y",
+    "show": "N",
     "Medium": "https://medium.com/@yourname/transformers-101",
     "GitHub": "https://github.com/yourname/yourrepo/blob/main/transformer_nlp.ipynb"
   },
@@ -319,7 +319,7 @@
   },
   {
     "Algorithm": "GPT (Generative Pretrained Transformer)",
-    "show": "Y",
+    "show": "N",
     "Medium": "https://medium.com/@yourname/gpt-language-models",
     "GitHub": "https://github.com/yourname/yourrepo/blob/main/gpt_generation.ipynb"
   },
@@ -553,7 +553,7 @@
   },
   {
     "Algorithm": "LIME",
-    "show": "Y",
+    "show": "N",
     "Medium": "",
     "GitHub": ""
   },

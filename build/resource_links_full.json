@@ -1,0 +1,578 @@
+[
+  {
+    "Algorithm": "Logistic Regression",
+    "show": "Y",
+    "Medium": "https://medium.com/@yourname/logistic-regression-explained",
+    "GitHub": "https://github.com/yourname/yourrepo/blob/main/logistic_regression.ipynb"
+  },
+  {
+    "Algorithm": "K-Nearest Neighbors (KNN)",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Support Vector Machine (SVM)",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Decision Tree Classifier",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Random Forest Classifier",
+    "show": "Y",
+    "Medium": "https://medium.com/@yourname/random-forest-guide",
+    "GitHub": "https://github.com/yourname/yourrepo/blob/main/random_forest.ipynb"
+  },
+  {
+    "Algorithm": "Gradient Boosting Classifier",
+    "show": "Y",
+    "Medium": "https://medium.com/@yourname/gradient-boosting-intro",
+    "GitHub": "https://github.com/yourname/yourrepo/blob/main/gradient_boosting_classifier.ipynb"
+  },
+  {
+    "Algorithm": "Naive Bayes",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "MLP Classifier (Neural Network)",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Quadratic Discriminant Analysis (QDA)",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Linear Discriminant Analysis (LDA)",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Rule-Based Classifier (e.g., RIPPER)",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Linear Regression",
+    "show": "Y",
+    "Medium": "https://medium.com/@yourname/linear-regression-basics",
+    "GitHub": "https://github.com/yourname/yourrepo/blob/main/linear_regression.ipynb"
+  },
+  {
+    "Algorithm": "Ridge Regression",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Lasso Regression",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "ElasticNet",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Support Vector Regression (SVR)",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Decision Tree Regressor",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Random Forest Regressor",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Gradient Boosting Regressor",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Bayesian Regression",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "KNN Regressor",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Quantile Regression",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Huber Regression",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "K-Means",
+    "show": "Y",
+    "Medium": "https://medium.com/@yourname/kmeans-customer-segmentation",
+    "GitHub": "https://github.com/yourname/yourrepo/blob/main/kmeans_clustering.ipynb"
+  },
+  {
+    "Algorithm": "DBSCAN",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Hierarchical Clustering",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Mean Shift",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Gaussian Mixture Model (GMM)",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Affinity Propagation",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "OPTICS",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "PCA",
+    "show": "Y",
+    "Medium": "https://medium.com/@yourname/pca-demystified",
+    "GitHub": "https://github.com/yourname/yourrepo/blob/main/pca_visualization.ipynb"
+  },
+  {
+    "Algorithm": "t-SNE",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "LDA (Dim Reduction)",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Autoencoders",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "UMAP",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "ICA",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Factor Analysis",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Isomap",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Isolation Forest",
+    "show": "Y",
+    "Medium": "https://medium.com/@yourname/isolation-forest-outlier-detection",
+    "GitHub": "https://github.com/yourname/yourrepo/blob/main/isolation_forest.ipynb"
+  },
+  {
+    "Algorithm": "One-Class SVM",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Elliptic Envelope",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Autoencoder-Based Anomaly Detection",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Local Outlier Factor (LOF)",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Feedforward Neural Network (FNN)",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Convolutional Neural Network (CNN)",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Recurrent Neural Network (RNN)",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Long Short-Term Memory (LSTM)",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Gated Recurrent Unit (GRU)",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Encoder-Decoder Architecture",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Transformer",
+    "show": "Y",
+    "Medium": "https://medium.com/@yourname/transformers-101",
+    "GitHub": "https://github.com/yourname/yourrepo/blob/main/transformer_nlp.ipynb"
+  },
+  {
+    "Algorithm": "ResNet",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "UNet",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Autoencoders (Basic, Denoising, Variational)",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "GPT (Generative Pretrained Transformer)",
+    "show": "Y",
+    "Medium": "https://medium.com/@yourname/gpt-language-models",
+    "GitHub": "https://github.com/yourname/yourrepo/blob/main/gpt_generation.ipynb"
+  },
+  {
+    "Algorithm": "BERT, RoBERTa, ALBERT",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "T5 (Text-to-Text Transfer Transformer)",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "BART",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "LLaMA, Falcon, Claude",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "DALL\u00ac\u2211E, MidJourney, Stable Diffusion",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "StyleGAN, BigGAN, CycleGAN",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "CLIP",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Flamingo (DeepMind)",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Gato (DeepMind)",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Gemini, Kosmos-1",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Q-Learning",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "SARSA",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Deep Q-Network (DQN)",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Policy Gradient Methods",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Actor-Critic",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Proximal Policy Optimization (PPO)",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Trust Region Policy Optimization (TRPO)",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Advantage Actor Critic (A2C, A3C)",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Monte Carlo Methods",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "TD-Learning (TD(0), TD(\u0152\u00aa))",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Graph Neural Networks (GNN)",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Graph Convolutional Networks (GCN)",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Graph Attention Networks (GAT)",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Graph Autoencoders",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "DeepWalk",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Node2Vec / Edge2Vec",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Knowledge Graph Embeddings (TransE, TransR)",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Bayesian Networks",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Hidden Markov Models (HMM)",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Markov Decision Processes (MDP)",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Gaussian Processes (GP)",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Probabilistic Graphical Models",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Bagging (e.g., Random Forest)",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Boosting (e.g., AdaBoost, XGBoost)",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Stacking (Stacked Generalization)",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Voting Classifier/Regressor",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Blending",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "SHAP",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "LIME",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Integrated Gradients",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "Permutation Importance",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  },
+  {
+    "Algorithm": "PDP",
+    "show": "N",
+    "Medium": "",
+    "GitHub": ""
+  }
+]

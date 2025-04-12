@@ -1,9 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import SearchBar from './components/SearchBar';
 import ModelCard from './components/ModelCard';
-import FilterSidebar from './components/FilterSidebar';
 import ModelModal from './components/ModelModal';
 import './App.css';
+
+const TABS = [
+  'All',
+  'Supervised',
+  'Unsupervised',
+  'Deep Learning',
+  'Generative AI',
+  'Reinforcement Learning',
+  'Graph ML',
+  'Probabilistic / Bayesian',
+  'Ensemble',
+  'Explainability Techniques'
+];
 
 function App() {
   const [models, setModels] = useState([]);
@@ -14,7 +26,7 @@ function App() {
   });
   const [darkMode, setDarkMode] = useState(false);
   const [resources, setResources] = useState([]);
-  const [resourceMap, setResourceMap] = useState({}); // 🔧 new lookup map
+  const [activeTab, setActiveTab] = useState('All');
 
   useEffect(() => {
     const fetchData = async () => {
@@ -24,41 +36,44 @@ function App() {
       const modelData = await modelRes.json();
       const resourceData = await resourceRes.json();
 
-      // 🔧 Build a quick lookup map where show === 'Y'
-      const visibleResources = {};
-      resourceData.forEach(r => {
-        if (r.show === 'Y') {
-          visibleResources[r.Algorithm] = r;
-        }
-      });
-
       setResources(resourceData);
-      setResourceMap(visibleResources);
 
-      // 🔧 Filter model list where Algorithm is in resourceMap
-      const filteredModels = modelData.filter(m => visibleResources[m.Algorithm]);
+      const allowed = resourceData.filter(r => r.show === 'Y').map(r => r.Algorithm);
+      const filteredModels = modelData.filter(m => allowed.includes(m.Algorithm));
 
       setModels(filteredModels);
       setFiltered(filteredModels);
     };
 
     fetchData();
-  }, [learnedModels]);
+  }, []);
 
   const handleSearch = (query) => {
-    if (!query) return setFiltered(models);
+    const base = activeTab === 'All' ? models : models.filter(m => m.Type?.toLowerCase().includes(activeTab.toLowerCase()));
+    if (!query) return setFiltered(base);
     const q = query.toLowerCase();
-    setFiltered(models.filter((m) =>
-      Object.values(m).some((val) => String(val).toLowerCase().includes(q))
+    setFiltered(base.filter((m) =>
+      Object.values(m).some((val) => val.toLowerCase().includes(q))
     ));
   };
 
+  const handleTabClick = (tab) => {
+    setActiveTab(tab);
+    if (tab === 'All') {
+      setFiltered(models);
+    } else {
+      setFiltered(models.filter(m => m.Type?.toLowerCase().includes(tab.toLowerCase())));
+    }
+  };
+
   const toggleLearned = (algorithm) => {
-    const updated = learnedModels.includes(algorithm)
-      ? learnedModels.filter(item => item !== algorithm)
-      : [...learnedModels, algorithm];
-    setLearnedModels(updated);
-    localStorage.setItem('learnedModels', JSON.stringify(updated));
+    setLearnedModels(prev => {
+      const updated = prev.includes(algorithm)
+        ? prev.filter(item => item !== algorithm)
+        : [...prev, algorithm];
+      localStorage.setItem('learnedModels', JSON.stringify(updated));
+      return updated;
+    });
   };
 
   return (
@@ -75,23 +90,29 @@ function App() {
         <SearchBar onSearch={handleSearch} />
       </div>
 
-      <div className="explorer-layout">
-        <div className="sidebar">
-          <FilterSidebar data={models} setFiltered={setFiltered} />
-        </div>
+      <div className="tabs">
+        {TABS.map(tab => (
+          <button
+            key={tab}
+            className={`tab-btn ${activeTab === tab ? 'active' : ''}`}
+            onClick={() => handleTabClick(tab)}
+          >
+            {tab}
+          </button>
+        ))}
+      </div>
 
-        <div className="content">
-          <div className="model-grid">
-            {filtered.map((model, idx) => (
-              <ModelCard
-                key={idx}
-                model={model}
-                onClick={setSelectedModel}
-                isLearned={learnedModels.includes(model.Algorithm)}
-                toggleLearned={toggleLearned}
-              />
-            ))}
-          </div>
+      <div className="content">
+        <div className="model-grid">
+          {filtered.map((model, idx) => (
+            <ModelCard
+              key={idx}
+              model={model}
+              onClick={setSelectedModel}
+              isLearned={learnedModels.includes(model.Algorithm)}
+              toggleLearned={toggleLearned}
+            />
+          ))}
         </div>
       </div>
 

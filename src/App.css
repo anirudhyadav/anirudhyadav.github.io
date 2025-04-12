@@ -67,3 +67,34 @@ body {
     font-size: 1rem;
     cursor: pointer;
   }
+
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    justify-content: center;
+  }
+  
+  .tab-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 20px;
+    background: #f1f1f1;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  
+  .tab-btn:hover {
+    background: #e0e0e0;
+  }
+  
+  .tab-btn.active {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    font-weight: 600;
+    transform: scale(1.05);
+  }

@@ -1,0 +1,20 @@
+[
+    {
+      "Algorithm": "Logistic Regression",
+      "show": "Y",
+      "Medium": "https://medium.com/@yourname/logistic-regression-explained",
+      "GitHub": "https://github.com/yourname/yourrepo/blob/main/logistic_regression.ipynb"
+    },
+    {
+      "Algorithm": "K-Nearest Neighbors (KNN)",
+      "show": "Y",
+      "Medium": "https://medium.com/@yourname/knn-guide",
+      "GitHub": "https://github.com/yourname/yourrepo/blob/main/knn.ipynb"
+    },
+    {
+      "Algorithm": "Support Vector Machine (SVM)",
+      "show": "N",
+      "Medium": "",
+      "GitHub": ""
+    }
+  ]

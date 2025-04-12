@@ -1,8 +1,9 @@
-// src/components/ModelModal.jsx
 import React from 'react';
 
-function ModelModal({ model, onClose }) {
+function ModelModal({ model, onClose, resources }) {
   if (!model) return null;
+
+  const matched = resources?.find(r => r.Algorithm === model.Algorithm);
 
   return (
     <div style={overlayStyle}>
@@ -14,6 +15,21 @@ function ModelModal({ model, onClose }) {
         <p><strong>Key Fundamentals:</strong> {model['Key Fundamentals to Know']}</p>
         <p><strong>Libraries:</strong> {model.Libraries}</p>
         <p><strong>Real-World Example:</strong> {model['Real-World Example']}</p>
+
+        {/* ✅ Links shown only if resource is ready */}
+        {matched?.show === 'Y' && (
+          <div style={{ marginTop: '1rem' }}>
+            <p>📘 <a href={matched.Medium} target='_blank' rel='noreferrer'>Read on Medium</a></p>
+            <p>💻 <a href={matched.GitHub} target='_blank' rel='noreferrer'>Open GitHub Notebook</a></p>
+          </div>
+        )}
+
+        {/* Optional: Coming Soon Label */}
+        {matched?.show === 'N' && (
+          <div style={{ marginTop: '1rem', color: 'orange' }}>
+            🚧 Learning resources for this model coming soon!
+          </div>
+        )}
       </div>
     </div>
   );

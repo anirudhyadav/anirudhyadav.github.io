@@ -5,6 +5,7 @@ import FilterSidebar from './components/FilterSidebar';
 import ModelModal from './components/ModelModal';
 import './App.css';
 
+
 function App() {
   const [models, setModels] = useState([]);
   const [filtered, setFiltered] = useState([]);
@@ -13,13 +14,21 @@ function App() {
     return JSON.parse(localStorage.getItem('learnedModels')) || [];
   });
   const [darkMode, setDarkMode] = useState(false);
+  const [resources, setResources] = useState([]);
 
+  // useEffect(() => {
+  //   fetch(process.env.PUBLIC_URL + '/Complete_ML_AI.json')
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setModels(data);
+  //       setFiltered(data);
+  //     });
+  // }, []);
   useEffect(() => {
-    fetch(process.env.PUBLIC_URL + '/Complete_ML_AI.json')
-      .then((res) => res.json())
-      .then((data) => {
-        setModels(data);
-        setFiltered(data);
+    fetch(process.env.PUBLIC_URL + '/resource_links.json')
+      .then(res => res.json())
+      .then(data => {
+        setResources(data);
       });
   }, []);
 
@@ -75,7 +84,12 @@ function App() {
         </div>
       </div>
 
-      <ModelModal model={selectedModel} onClose={() => setSelectedModel(null)} />
+      {/* <ModelModal model={selectedModel} onClose={() => setSelectedModel(null)} /> */}
+      <ModelModal
+  model={selectedModel}
+  onClose={() => setSelectedModel(null)}
+  resources={resources}
+      />
     </div>
   );
 }

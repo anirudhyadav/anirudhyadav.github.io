@@ -5,6 +5,8 @@ function ModelModal({ model, onClose, resources }) {
 
   const matched = resources?.find(r => r.Algorithm === model.Algorithm);
 
+  const hasLinks = matched?.Medium || matched?.GitHub;
+
   return (
     <div style={overlayStyle}>
       <div style={modalStyle}>
@@ -16,15 +18,19 @@ function ModelModal({ model, onClose, resources }) {
         <p><strong>Libraries:</strong> {model.Libraries}</p>
         <p><strong>Real-World Example:</strong> {model['Real-World Example']}</p>
 
-        {matched?.show === 'Y' && (
+        {matched?.show === 'Y' && hasLinks && (
           <>
-            <p>📘 <a href={matched.Medium} target="_blank" rel="noreferrer">Read on Medium</a></p>
-            <p>💻 <a href={matched.GitHub} target="_blank" rel="noreferrer">View GitHub Notebook</a></p>
+            {matched.Medium && (
+              <p>📘 <a href={matched.Medium} target="_blank" rel="noreferrer">Read on Medium</a></p>
+            )}
+            {matched.GitHub && (
+              <p>💻 <a href={matched.GitHub} target="_blank" rel="noreferrer">View GitHub Notebook</a></p>
+            )}
           </>
         )}
 
-        {matched?.show === 'N' && (
-          <p style={{ color: 'orange' }}>🚧 Learning content coming soon!</p>
+        {matched?.show === 'Y' && !hasLinks && (
+          <p style={{ color: 'orange' }}>🎊 Learning content coming soon!</p>
         )}
       </div>
     </div>

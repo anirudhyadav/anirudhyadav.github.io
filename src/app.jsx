@@ -5,7 +5,6 @@ import FilterSidebar from './components/FilterSidebar';
 import ModelModal from './components/ModelModal';
 import './App.css';
 
-
 function App() {
   const [models, setModels] = useState([]);
   const [filtered, setFiltered] = useState([]);
@@ -15,41 +14,34 @@ function App() {
   });
   const [darkMode, setDarkMode] = useState(false);
   const [resources, setResources] = useState([]);
-
-  // useEffect(() => {
-  //   fetch(process.env.PUBLIC_URL + '/Complete_ML_AI.json')
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setModels(data);
-  //       setFiltered(data);
-  //     });
-  // }, []);
-  useEffect(() => {
-    fetch(process.env.PUBLIC_URL + '/resource_links.json')
-      .then(res => res.json())
-      .then(data => {
-        setResources(data);
-      });
-  }, []);
+  const [resourceMap, setResourceMap] = useState({}); // 🔧 new lookup map
 
   useEffect(() => {
     const fetchData = async () => {
       const modelRes = await fetch(process.env.PUBLIC_URL + '/Complete_ML_AI.json');
       const resourceRes = await fetch(process.env.PUBLIC_URL + '/resource_links.json');
-  
+
       const modelData = await modelRes.json();
       const resourceData = await resourceRes.json();
-  
-      setModels(modelData);
+
+      // 🔧 Build a quick lookup map where show === 'Y'
+      const visibleResources = {};
+      resourceData.forEach(r => {
+        if (r.show === 'Y') {
+          visibleResources[r.Algorithm] = r;
+        }
+      });
+
       setResources(resourceData);
-  
-      // ✅ Filter models where Algorithm has show === 'Y'
-      const allowed = resourceData.filter(r => r.show === 'Y').map(r => r.Algorithm);
-      const filteredModels = modelData.filter(m => allowed.includes(m.Algorithm));
-  
+      setResourceMap(visibleResources);
+
+      // 🔧 Filter model list where Algorithm is in resourceMap
+      const filteredModels = modelData.filter(m => visibleResources[m.Algorithm]);
+
+      setModels(filteredModels);
       setFiltered(filteredModels);
     };
-  
+
     fetchData();
   }, [learnedModels]);
 
@@ -57,14 +49,16 @@ function App() {
     if (!query) return setFiltered(models);
     const q = query.toLowerCase();
     setFiltered(models.filter((m) =>
-      Object.values(m).some((val) => val.toLowerCase().includes(q))
+      Object.values(m).some((val) => String(val).toLowerCase().includes(q))
     ));
   };
 
   const toggleLearned = (algorithm) => {
-    setLearnedModels(prev => prev.includes(algorithm)
-      ? prev.filter(item => item !== algorithm)
-      : [...prev, algorithm]);
+    const updated = learnedModels.includes(algorithm)
+      ? learnedModels.filter(item => item !== algorithm)
+      : [...learnedModels, algorithm];
+    setLearnedModels(updated);
+    localStorage.setItem('learnedModels', JSON.stringify(updated));
   };
 
   return (
@@ -101,11 +95,10 @@ function App() {
         </div>
       </div>
 
-      {/* <ModelModal model={selectedModel} onClose={() => setSelectedModel(null)} /> */}
       <ModelModal
-  model={selectedModel}
-  onClose={() => setSelectedModel(null)}
-  resources={resources}
+        model={selectedModel}
+        onClose={() => setSelectedModel(null)}
+        resources={resources}
       />
     </div>
   );

@@ -6,13 +6,175 @@
       "GitHub": "https://github.com/yourname/yourrepo/blob/main/logistic_regression.ipynb"
     },
     {
-      "Algorithm": "K-Nearest Neighbors (KNN)",
+      "Algorithm": "Random Forest Classifier",
       "show": "Y",
-      "Medium": "https://medium.com/@yourname/knn-guide",
-      "GitHub": "https://github.com/yourname/yourrepo/blob/main/knn.ipynb"
+      "Medium": "https://medium.com/@yourname/random-forest-guide",
+      "GitHub": "https://github.com/yourname/yourrepo/blob/main/random_forest.ipynb"
+    },
+    {
+      "Algorithm": "Gradient Boosting Classifier",
+      "show": "Y",
+      "Medium": "https://medium.com/@yourname/gradient-boosting-intro",
+      "GitHub": "https://github.com/yourname/yourrepo/blob/main/gradient_boosting_classifier.ipynb"
     },
     {
       "Algorithm": "Support Vector Machine (SVM)",
+      "show": "N",
+      "Medium": "",
+      "GitHub": ""
+    },
+    {
+      "Algorithm": "MLP Classifier (Neural Net)",
+      "show": "N",
+      "Medium": "",
+      "GitHub": ""
+    },
+    {
+      "Algorithm": "Linear Regression",
+      "show": "Y",
+      "Medium": "https://medium.com/@yourname/linear-regression-basics",
+      "GitHub": "https://github.com/yourname/yourrepo/blob/main/linear_regression.ipynb"
+    },
+    {
+      "Algorithm": "Ridge Regression",
+      "show": "N",
+      "Medium": "",
+      "GitHub": ""
+    },
+    {
+      "Algorithm": "Lasso Regression",
+      "show": "N",
+      "Medium": "",
+      "GitHub": ""
+    },
+    {
+      "Algorithm": "Support Vector Regression (SVR)",
+      "show": "N",
+      "Medium": "",
+      "GitHub": ""
+    },
+    {
+      "Algorithm": "Gradient Boosting Regressor",
+      "show": "N",
+      "Medium": "",
+      "GitHub": ""
+    },
+    {
+      "Algorithm": "K-Means",
+      "show": "Y",
+      "Medium": "https://medium.com/@yourname/kmeans-customer-segmentation",
+      "GitHub": "https://github.com/yourname/yourrepo/blob/main/kmeans_clustering.ipynb"
+    },
+    {
+      "Algorithm": "DBSCAN",
+      "show": "N",
+      "Medium": "",
+      "GitHub": ""
+    },
+    {
+      "Algorithm": "Gaussian Mixture Model (GMM)",
+      "show": "N",
+      "Medium": "",
+      "GitHub": ""
+    },
+    {
+      "Algorithm": "Hierarchical Clustering",
+      "show": "N",
+      "Medium": "",
+      "GitHub": ""
+    },
+    {
+      "Algorithm": "Affinity Propagation",
+      "show": "N",
+      "Medium": "",
+      "GitHub": ""
+    },
+    {
+      "Algorithm": "PCA",
+      "show": "Y",
+      "Medium": "https://medium.com/@yourname/pca-demystified",
+      "GitHub": "https://github.com/yourname/yourrepo/blob/main/pca_visualization.ipynb"
+    },
+    {
+      "Algorithm": "t-SNE",
+      "show": "N",
+      "Medium": "",
+      "GitHub": ""
+    },
+    {
+      "Algorithm": "UMAP",
+      "show": "N",
+      "Medium": "",
+      "GitHub": ""
+    },
+    {
+      "Algorithm": "Autoencoders",
+      "show": "N",
+      "Medium": "",
+      "GitHub": ""
+    },
+    {
+      "Algorithm": "Isomap",
+      "show": "N",
+      "Medium": "",
+      "GitHub": ""
+    },
+    {
+      "Algorithm": "Isolation Forest",
+      "show": "Y",
+      "Medium": "https://medium.com/@yourname/isolation-forest-outlier-detection",
+      "GitHub": "https://github.com/yourname/yourrepo/blob/main/isolation_forest.ipynb"
+    },
+    {
+      "Algorithm": "Autoencoder-Based Anomaly Detection",
+      "show": "N",
+      "Medium": "",
+      "GitHub": ""
+    },
+    {
+      "Algorithm": "Local Outlier Factor (LOF)",
+      "show": "N",
+      "Medium": "",
+      "GitHub": ""
+    },
+    {
+      "Algorithm": "Feedforward Neural Network (FNN)",
+      "show": "N",
+      "Medium": "",
+      "GitHub": ""
+    },
+    {
+      "Algorithm": "Convolutional Neural Network (CNN)",
+      "show": "N",
+      "Medium": "",
+      "GitHub": ""
+    },
+    {
+      "Algorithm": "Transformer",
+      "show": "Y",
+      "Medium": "https://medium.com/@yourname/transformers-101",
+      "GitHub": "https://github.com/yourname/yourrepo/blob/main/transformer_nlp.ipynb"
+    },
+    {
+      "Algorithm": "Long Short-Term Memory (LSTM)",
+      "show": "N",
+      "Medium": "",
+      "GitHub": ""
+    },
+    {
+      "Algorithm": "GPT (Generative Pretrained Transformer)",
+      "show": "Y",
+      "Medium": "https://medium.com/@yourname/gpt-language-models",
+      "GitHub": "https://github.com/yourname/yourrepo/blob/main/gpt_generation.ipynb"
+    },
+    {
+      "Algorithm": "Stable Diffusion",
+      "show": "Y",
+      "Medium": "https://medium.com/@yourname/stable-diffusion-explained",
+      "GitHub": "https://github.com/yourname/yourrepo/blob/main/stable_diffusion_text2image.ipynb"
+    },
+    {
+      "Algorithm": "CLIP",
       "show": "N",
       "Medium": "",
       "GitHub": ""

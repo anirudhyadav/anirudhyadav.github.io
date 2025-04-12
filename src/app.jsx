@@ -8,7 +8,7 @@ function App() {
   const [filtered, setFiltered] = useState([]);
 
   useEffect(() => {
-    fetch('./Complete_ML_AI.json')
+    fetch(process.env.PUBLIC_URL + '/Complete_ML_AI.json')
       .then((res) => res.json())
       .then((data) => {
         setModels(data);

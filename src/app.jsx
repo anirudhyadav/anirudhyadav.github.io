@@ -2,10 +2,13 @@ import React, { useEffect, useState } from 'react';
 import SearchBar from './components/SearchBar';
 import ModelCard from './components/ModelCard';
 import FilterSidebar from './components/FilterSidebar';
+import ModelModal from './components/ModelModal';
 
 function App() {
   const [models, setModels] = useState([]);
   const [filtered, setFiltered] = useState([]);
+  const [selectedModel, setSelectedModel] = useState(null);
+
 
   useEffect(() => {
     fetch(process.env.PUBLIC_URL + '/Complete_ML_AI.json')
@@ -34,9 +37,12 @@ function App() {
         <SearchBar onSearch={handleSearch} />
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
           {filtered.map((model, idx) => (
-            <ModelCard key={idx} model={model} />
+            <ModelCard key={idx} model={model} onClick={setSelectedModel} />
           ))}
         </div>
+  
+        {/* ✅ Modal for full model info */}
+        <ModelModal model={selectedModel} onClose={() => setSelectedModel(null)} />
       </div>
     </div>
   );

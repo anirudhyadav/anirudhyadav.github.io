@@ -12,23 +12,22 @@ function FilterSidebar({ data, setFiltered }) {
   };
 
   return (
-    <div style={{ width: '250px', padding: '1rem', borderRight: '1px solid #eee' }}>
-      <h3>🔎 Filters</h3>
-      <div>
-        <label>📘 Type:</label>
-        <select onChange={(e) => filterBy(e.target.value, null)}>
+    <>
+      <div style={{ marginBottom: '1.5rem' }}>
+        <label><strong>📘 Type:</strong></label><br />
+        <select onChange={(e) => filterBy(e.target.value, null)} style={{ width: '100%', padding: '0.5rem' }}>
           <option value=''>All</option>
           {types.map((t, idx) => <option key={idx}>{t}</option>)}
         </select>
       </div>
       <div>
-        <label>🍀 Complexity:</label>
-        <select onChange={(e) => filterBy(null, e.target.value)}>
+        <label><strong>🍀 Complexity:</strong></label><br />
+        <select onChange={(e) => filterBy(null, e.target.value)} style={{ width: '100%', padding: '0.5rem' }}>
           <option value=''>All</option>
           {complexities.map((c, idx) => <option key={idx}>{c}</option>)}
         </select>
       </div>
-    </div>
+    </>
   );
 }
 

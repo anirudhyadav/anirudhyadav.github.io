@@ -5,16 +5,16 @@ import ModelModal from './components/ModelModal';
 import './App.css';
 
 const TABS = [
-  'All',
+  'Fundamentals',
   'Supervised',
   'Unsupervised',
   'Deep Learning',
-  'Generative AI',
   'Reinforcement Learning',
   'Graph ML',
   'Probabilistic / Bayesian',
   'Ensemble',
-  'Explainability Techniques'
+  'Explainability Techniques',
+  'Generative AI'
 ];
 
 function App() {
@@ -28,11 +28,11 @@ function App() {
   const [resources, setResources] = useState([]);
   const [activeTab, setActiveTab] = useState('All');
 
+  // Load model + resource data
   useEffect(() => {
     const fetchData = async () => {
       const modelRes = await fetch(process.env.PUBLIC_URL + '/Complete_ML_AI.json');
       const resourceRes = await fetch(process.env.PUBLIC_URL + '/resource_links.json');
-
       const modelData = await modelRes.json();
       const resourceData = await resourceRes.json();
 
@@ -48,15 +48,23 @@ function App() {
     fetchData();
   }, []);
 
+  // Search filter
   const handleSearch = (query) => {
-    const base = activeTab === 'All' ? models : models.filter(m => m.Type?.toLowerCase().includes(activeTab.toLowerCase()));
+    const base = activeTab === 'All'
+      ? models
+      : models.filter(m => m.Type?.toLowerCase().includes(activeTab.toLowerCase()));
+
     if (!query) return setFiltered(base);
+
     const q = query.toLowerCase();
-    setFiltered(base.filter((m) =>
-      Object.values(m).some((val) => val.toLowerCase().includes(q))
-    ));
+    setFiltered(
+      base.filter((m) =>
+        Object.values(m).some((val) => val.toLowerCase().includes(q))
+      )
+    );
   };
 
+  // Tab filter
   const handleTabClick = (tab) => {
     setActiveTab(tab);
     if (tab === 'All') {
@@ -66,6 +74,7 @@ function App() {
     }
   };
 
+  // Mark/unmark learned models
   const toggleLearned = (algorithm) => {
     setLearnedModels(prev => {
       const updated = prev.includes(algorithm)
@@ -78,22 +87,47 @@ function App() {
 
   return (
     <div className={darkMode ? 'app dark' : 'app'}>
+      
+      {/* Topbar */}
       <div className="topbar">
-      <div style={{ display: "flex", alignItems: "center" }}>
-  <img 
-    src={process.env.PUBLIC_URL + "/Signature.png"} 
-    alt="Signature" 
-    style={{ height: "50px", marginRight: "1rem" }}
-  />
-  <h1>AI/ML Explorer</h1>
-</div>
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <img 
+            src={process.env.PUBLIC_URL + "/Signature.png"} 
+            alt="Signature" 
+            style={{ height: "50px", marginRight: "1rem" }}
+          />
+          <h1>AI/ML Explorer</h1>
+        </div>
       </div>
 
+      {/* Feature Highlights */}
+      <section className="feature-section">
+  <div className="feature-wrapper">
+    <div className="feature-card">
+      <span className="emoji">📚</span>
+      <h3>AI-ready models</h3>
+      <p>Browse standardized ML models with clear tags, complexity, and real-world use cases.</p>
+    </div>
+    <div className="feature-card">
+      <span className="emoji">🧰</span>
+      <h3>Explainability Toolkit</h3>
+      <p>Discover model interpretation techniques like SHAP, LIME, PDP with evaluation insights.</p>
+    </div>
+    <div className="feature-card">
+      <span className="emoji">🚀</span>
+      <h3>Deployment Ready</h3>
+      <p>Learn which models are fast, interpretable, and best for production deployment paths.</p>
+    </div>
+  </div>
+</section>
+
+      {/* Hero + Search */}
       <div className="hero">
         <h2>Search, Filter, and Learn AI Models – for Students & Practitioners 🚀</h2>
         <SearchBar onSearch={handleSearch} />
       </div>
 
+      {/* Tab Filters */}
       <div className="tabs">
         {TABS.map(tab => (
           <button
@@ -105,8 +139,8 @@ function App() {
           </button>
         ))}
       </div>
-      
 
+      {/* Model Cards */}
       <div className="content">
         <div className="model-grid">
           {filtered.map((model, idx) => (
@@ -121,6 +155,7 @@ function App() {
         </div>
       </div>
 
+      {/* Modal */}
       <ModelModal
         model={selectedModel}
         onClose={() => setSelectedModel(null)}
@@ -129,5 +164,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;

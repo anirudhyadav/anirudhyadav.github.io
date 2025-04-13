@@ -1,100 +1,171 @@
-/* App.css */
+/* Global styles */
 body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-  }
-  
-  .app {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .dark {
-    background: #1e1e1e;
-    color: #fff;
-  }
-  
-  .topbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
-  }
-  
-  .hero {
-    background: linear-gradient(90deg, #6a11cb, #2575fc);
-    color: white;
-    padding: 1rem 2rem;
-    border-radius: 8px;
-  }
-  
-  .explorer-layout {
-    display: flex;
-  }
-  
-  .sidebar {
-    width: 250px;
-    padding: 1rem;
-    background: #f3f3f3;
-  }
-  
-  .content {
-    flex: 1;
-    padding: 1rem;
-  }
-  
-  .model-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  
-  .model-card {
-    background: #fff;
-    padding: 1rem;
-    border-radius: 8px;
-    width: 280px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    cursor: pointer;
-  }
-  
-  .model-card.learned {
-    border: 2px solid green;
-  }
-  
-  .toggle-mode {
-    background: transparent;
-    border: none;
-    font-size: 1rem;
-    cursor: pointer;
-  }
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fdfdfd;
+  color: #222;
+}
 
-  .tabs {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin: 1rem 0;
-    justify-content: center;
-  }
-  
-  .tab-btn {
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 20px;
-    background: #f1f1f1;
-    font-weight: 500;
-    color: #333;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-  }
-  
-  .tab-btn:hover {
-    background: #e0e0e0;
-  }
-  
-  .tab-btn.active {
-    background: linear-gradient(to right, #6a11cb, #2575fc);
-    color: white;
-    font-weight: 600;
-    transform: scale(1.05);
-  }
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.dark {
+  background: #1e1e1e;
+  color: #fff;
+}
+
+/* Top Navigation */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 1200px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.5rem auto;
+  justify-content: center;
+  max-width: 1200px;
+}
+
+.tab-btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 20px;
+  background: #f1f1f1;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+}
+
+.tab-btn:hover {
+  background: #e0e0e0;
+}
+
+.tab-btn.active {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  font-weight: 600;
+  transform: scale(1.05);
+}
+
+/* Model Grid */
+.content {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.model-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.model-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.model-card:hover {
+  transform: translateY(-4px);
+}
+
+.model-card.learned {
+  border: 2px solid green;
+}
+
+/* Sidebar (optional if used) */
+.explorer-layout {
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  padding: 1rem;
+  background: #f3f3f3;
+}
+
+/* Toggle Mode Button */
+.toggle-mode {
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* === Feature Section === */
+.feature-section {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.feature-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12rem;
+  max-width: 2000px;
+  width: 100%;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 12px;
+  padding: .5rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card .emoji {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}

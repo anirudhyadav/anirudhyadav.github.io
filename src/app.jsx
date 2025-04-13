@@ -6,10 +6,11 @@ import './App.css';
 
 const TABS = [
   'Fundamentals',
+  'Exploratory Data Analysis',
+  'Database\'s',
   'Supervised',
   'Unsupervised',
   'Deep Learning',
-  'Reinforcement Learning',
   'Graph ML',
   'Probabilistic / Bayesian',
   'Ensemble',

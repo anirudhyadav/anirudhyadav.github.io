@@ -15,7 +15,7 @@ const TABS = [
   'Probabilistic / Bayesian',
   'Ensemble',
   'Explainability Techniques',
-  'Generative AI'
+  'Agent AI'
 ];
 
 function App() {

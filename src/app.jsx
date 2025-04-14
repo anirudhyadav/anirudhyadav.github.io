@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import SearchBar from './components/SearchBar';
 import ModelCard from './components/ModelCard';
 import ModelModal from './components/ModelModal';
+import EDACards from './components/EDACards'; // ✅ Add this line
 import './App.css';
 
 const TABS = [
@@ -102,24 +103,24 @@ function App() {
 
       {/* Feature Highlights */}
       <section className="feature-section">
-  <div className="feature-wrapper">
-    <div className="feature-card">
-      <span className="emoji">📚</span>
-      <h3>AI-ready models</h3>
-      <p>Browse standardized ML models with clear tags, complexity, and real-world use cases.</p>
-    </div>
-    <div className="feature-card">
-      <span className="emoji">🧰</span>
-      <h3>Explainability Toolkit</h3>
-      <p>Discover model interpretation techniques like SHAP, LIME, PDP with evaluation insights.</p>
-    </div>
-    <div className="feature-card">
-      <span className="emoji">🚀</span>
-      <h3>Deployment Ready</h3>
-      <p>Learn which models are fast, interpretable, and best for production deployment paths.</p>
-    </div>
-  </div>
-</section>
+        <div className="feature-wrapper">
+          <div className="feature-card">
+            <span className="emoji">📚</span>
+            <h3>AI-ready models</h3>
+            <p>Browse standardized ML models with clear tags, complexity, and real-world use cases.</p>
+          </div>
+          <div className="feature-card">
+            <span className="emoji">🧰</span>
+            <h3>Explainability Toolkit</h3>
+            <p>Discover model interpretation techniques like SHAP, LIME, PDP with evaluation insights.</p>
+          </div>
+          <div className="feature-card">
+            <span className="emoji">🚀</span>
+            <h3>Deployment Ready</h3>
+            <p>Learn which models are fast, interpretable, and best for production deployment paths.</p>
+          </div>
+        </div>
+      </section>
 
       {/* Hero + Search */}
       <div className="hero">
@@ -140,19 +141,23 @@ function App() {
         ))}
       </div>
 
-      {/* Model Cards */}
+      {/* Main Content */}
       <div className="content">
-        <div className="model-grid">
-          {filtered.map((model, idx) => (
-            <ModelCard
-              key={idx}
-              model={model}
-              onClick={setSelectedModel}
-              isLearned={learnedModels.includes(model.Algorithm)}
-              toggleLearned={toggleLearned}
-            />
-          ))}
-        </div>
+        {activeTab === 'Exploratory Data Analysis' ? (
+          <EDACards />
+        ) : (
+          <div className="model-grid">
+            {filtered.map((model, idx) => (
+              <ModelCard
+                key={idx}
+                model={model}
+                onClick={setSelectedModel}
+                isLearned={learnedModels.includes(model.Algorithm)}
+                toggleLearned={toggleLearned}
+              />
+            ))}
+          </div>
+        )}
       </div>
 
       {/* Modal */}
@@ -164,6 +169,5 @@ function App() {
     </div>
   );
 }
-
 
 export default App;

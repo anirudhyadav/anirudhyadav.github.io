@@ -1,0 +1,81 @@
+[
+    {
+        "title": "Master EDA Concepts",
+        "target": "clicked",
+        "type": "EDA Fundamentals",
+        "description": "Talk about EDA and what is genrally scopped in.",
+        "notebook": "https://github.com/anirudhyadav/EDA/blob/main/MASTER_EDA_CONCEPT_DOCUMENT.ipynb"
+      },
+    {
+      "title": "Ad Click Prediction",
+      "target": "clicked",
+      "type": "Binary Classification",
+      "description": "Class imbalance, CTR profiling, and campaign optimization.",
+      "dataset": "https://github.com/anirudhyadav/EDA/blob/main/EDA_AdClick_Dataset.csv",
+      "notebook": "https://github.com/anirudhyadav/EDA/blob/main/EDA_AdClick_Notebook.ipynb",
+      "report": "adclick_autoeda_report.html"
+    },
+    {
+      "title": "Customer Churn",
+      "target": "is_churned",
+      "type": "Binary Classification",
+      "description": "Time-to-event churn analysis with temporal profiling.",
+      "dataset": "https://github.com/anirudhyadav/EDA/blob/main/EDA_CustomerChurn_Dataset.csv",
+      "notebook": "Ehttps://github.com/anirudhyadav/EDA/blob/main/EDA_CustomerChurn_Notebook.ipynb",
+      "report": "churn_autoeda_report.html"
+    },
+    {
+      "title": "Credit Score Segmentation",
+      "target": "cluster",
+      "type": "Clustering",
+      "description": "Unsupervised segmentation using PCA and outlier handling.",
+      "dataset": "https://github.com/anirudhyadav/EDA/blob/main/EDA_CreditScoreSegmentation_Dataset.csv",
+      "notebook": "https://github.com/anirudhyadav/EDA/blob/main/EDA_CreditScoreSegmentation_Notebook.ipynb",
+      "report": "autoeda_credit_segmentation.html"
+    },
+    {
+      "title": "Disease Diagnosis",
+      "target": "diagnosis_code",
+      "type": "Multiclass Classification",
+      "description": "Leakage detection and mixed-type features with class imbalance.",
+      "dataset": "https://github.com/anirudhyadav/EDA/blob/main/EDA_DiseaseDiagnosis_Dataset.csv",
+      "notebook": "https://github.com/anirudhyadav/EDA/blob/main/EDA_DiseaseDiagnosis_Notebook.ipynb",
+      "report": "autoeda_disease_diagnosis.html"
+    },
+    {
+      "title": "Product Recommendation Clustering",
+      "target": "cluster",
+      "type": "Clustering",
+      "description": "High-dimensional behavioral clustering for product affinity.",
+      "dataset": "https://github.com/anirudhyadav/EDA/blob/main/EDA_ProductRecommendationClustering_Dataset.csv",
+      "notebook": "https://github.com/anirudhyadav/EDA/blob/main/EDA_ProductRecommendationClustering_Notebook.ipynb",
+      "report": "autoeda_product_cluster.html"
+    },
+    {
+      "title": "Sentiment Classification",
+      "target": "sentiment",
+      "type": "Text Classification",
+      "description": "Analyzing text features such as sentiment, length, and score.",
+      "dataset": "https://github.com/anirudhyadav/EDA/blob/main/EDA_SentimentClassification_Dataset.csv",
+      "notebook": "https://github.com/anirudhyadav/EDA/blob/main/EDA_SentimentClassification_Notebook.ipynb",
+      "report": "autoeda_sentiment_analysis.html"
+    },
+    {
+      "title": "Employee Attrition",
+      "target": "attrition",
+      "type": "Binary Classification",
+      "description": "HR attrition profiling with tenure and categorical imbalance.",
+      "dataset": "https://github.com/anirudhyadav/EDA/blob/main/EDA_EmployeeAttrition_Dataset.csv",
+      "notebook": "https://github.com/anirudhyadav/EDA/blob/main/EDA_EmployeeAttrition_Notebook.ipynb",
+      "report": "attrition_autoeda_report.html"
+    },
+    {
+      "title": "Banking Transactions",
+      "target": "Generic",
+      "type": "EDA Only",
+      "description": "General EDA on banking KPIs, metrics, and outlier insights.",
+      "dataset": "https://github.com/anirudhyadav/EDA/blob/main/EDA_Banking_dataset.csv",
+      "notebook": "https://github.com/anirudhyadav/EDA/blob/main/EDA_Banking_Dataset.ipynb",
+      "report": "Banking_EDA_AutoReport.html"
+    }
+  ]

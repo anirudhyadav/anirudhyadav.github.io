@@ -24,9 +24,11 @@ const EDACards = () => {
                     <a href={item.dataset} target="_blank" rel="noopener noreferrer">📂 Dataset</a>
                 )}
                 {item.notebook && (
-                    <a href={item.notebook} target="_blank" rel="noopener noreferrer">📂 notebook</a>
+                    <a href={item.notebook} target="_blank" rel="noopener noreferrer">📂 Notebook</a>
                 )}
-                <a href={`/reports/${item.report}`} target="_blank" rel="noopener noreferrer">📊 AutoEDA</a>
+                {item.report && (
+                    <a href={`/reports/${item.report}`} target="_blank" rel="noopener noreferrer">📊 AutoEDA</a>
+                )}
                 </div>
           </div>
         ))}

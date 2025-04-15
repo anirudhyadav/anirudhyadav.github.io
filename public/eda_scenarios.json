@@ -75,7 +75,7 @@
       "type": "EDA Only",
       "description": "General EDA on banking KPIs, metrics, and outlier insights.",
       "dataset": "https://github.com/anirudhyadav/EDA/blob/main/EDA_Banking_dataset.csv",
-      "notebook": "https://github.com/anirudhyadav/EDA/blob/main/EDA_Banking_Dataset.ipynb",
+      "notebook": "https://github.com/anirudhyadav/EDA/blob/main/EDA_Banking_Notebook.ipynb",
       "report": "Banking_EDA_AutoReport.html"
     }
   ]

@@ -13,13 +13,13 @@
   },
   {
     "Algorithm": "Support Vector Machine (SVM)",
-    "show": "N",
+    "show": "Y",
     "Medium": "",
     "GitHub": ""
   },
   {
     "Algorithm": "Decision Tree Classifier",
-    "show": "N",
+    "show": "Y",
     "Medium": "",
     "GitHub": ""
   },

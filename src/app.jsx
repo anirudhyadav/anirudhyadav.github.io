@@ -9,13 +9,13 @@ const TABS = [
   'Fundamentals',
   'Exploratory Data Analysis',
   'Supervised',
-  'Unsupervised',
-  'Deep Learning',
-  'Graph ML',
-  'Probabilistic / Bayesian',
-  'Ensemble',
-  'Explainability Techniques',
-  'Agent AI'
+  // 'Unsupervised',
+  // 'Deep Learning',
+  //'Graph ML',
+  //'Probabilistic / Bayesian',
+  //'Ensemble',
+  //'Explainability Techniques',
+  //'Agent AI'
 ];
 
 function App() {
